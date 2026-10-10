@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 36920184}
   - component: {fileID: 36920183}
-  - component: {fileID: 36920182}
   - component: {fileID: 36920185}
+  - component: {fileID: 36920186}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -142,14 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &36920182
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36920181}
-  m_Enabled: 1
 --- !u!20 &36920183
 Camera:
   m_ObjectHideFlags: 0
@@ -241,6 +233,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &36920186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36920181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1291eeb7844427b449d3b3bd307c3804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &72920553
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +256,7 @@ GameObject:
   - component: {fileID: 72920556}
   - component: {fileID: 72920555}
   - component: {fileID: 72920554}
+  - component: {fileID: 72920557}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -308,7 +313,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72920553}
-  m_Mesh: {fileID: 4300000, guid: f685b6cac3fc1aa41b1da022ba565e1f, type: 2}
+  m_Mesh: {fileID: -5084877041813586466, guid: fc5dfe5c04f4b354980eff562fd61da7, type: 3}
 --- !u!4 &72920556
 Transform:
   m_ObjectHideFlags: 0
@@ -324,6 +329,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72920557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72920553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aad374b5d794a9429e77be4193c1f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674836973
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +352,7 @@ GameObject:
   - component: {fileID: 674836976}
   - component: {fileID: 674836975}
   - component: {fileID: 674836974}
+  - component: {fileID: 674836977}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -391,7 +409,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674836973}
-  m_Mesh: {fileID: 4300000, guid: a7a8959e79d21364ab83fb185b9d7b9a, type: 2}
+  m_Mesh: {fileID: -1615696825608770126, guid: 0c8118dd574be8047ba8c4aede393157, type: 3}
 --- !u!4 &674836976
 Transform:
   m_ObjectHideFlags: 0
@@ -407,6 +425,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &674836977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674836973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aad374b5d794a9429e77be4193c1f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071055566
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +448,7 @@ GameObject:
   - component: {fileID: 2071055569}
   - component: {fileID: 2071055568}
   - component: {fileID: 2071055567}
+  - component: {fileID: 2071055570}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -474,7 +505,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071055566}
-  m_Mesh: {fileID: 4300000, guid: 3d3a08b6c2f578c438d321962351c693, type: 2}
+  m_Mesh: {fileID: -6879201036809095612, guid: 92a932ae395d0314593a4cf8e6fe9b52, type: 3}
 --- !u!4 &2071055569
 Transform:
   m_ObjectHideFlags: 0
@@ -490,3 +521,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &2071055570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071055566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aad374b5d794a9429e77be4193c1f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

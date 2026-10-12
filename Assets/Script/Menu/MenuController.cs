@@ -6,6 +6,10 @@ public class MenuController : MonoBehaviour
     {
         for (int i = 0; i < keywords.Length; i++)
         {
+            if (string.IsNullOrEmpty(keywords[i]))
+            {
+                continue;
+            }
             if (i == index)
             {
                 Shader.EnableKeyword(keywords[i]);
@@ -17,7 +21,8 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    private static readonly string[] outlineKeywords = { "_OUTLINE_USE_NORMAL", "_OUTLINE_USE_BAKENORMAL" };
+    private static readonly string[] outlineKeywords = { "_OUTLINE_NORMAL", "_OUTLINE_BAKE2", "_OUTLINE_BAKE3", "" };
+    private static readonly string[] outlineNames    = { "原始法线", "烘焙法线2", "烘焙法线3", "关闭" };
     const int kButtonWidth = 300;
     const int kButtonHeight = 40;
     const int kButtonSpacing = 10;
@@ -27,21 +32,13 @@ public class MenuController : MonoBehaviour
         int y = 10;
         int x = 10;
     
-        if (GUI.Button(new Rect(x, y, kButtonWidth, kButtonHeight), outlineKeywords[0]))
+        for (int i = 0; i < outlineKeywords.Length; i++)
         {
-            SwitchShaderKeyword(outlineKeywords, 0);
-        }
-
-        y += kButtonHeight + kButtonSpacing;
-        if (GUI.Button(new Rect(x, y, kButtonWidth, kButtonHeight), outlineKeywords[1]))
-        {
-            SwitchShaderKeyword(outlineKeywords, 1);
-        }
-
-        y += kButtonHeight + kButtonSpacing;
-        if (GUI.Button(new Rect(x, y, kButtonWidth, kButtonHeight), "Empty"))
-        {
-            SwitchShaderKeyword(outlineKeywords, -1);
+            if (GUI.Button(new Rect(x, y, kButtonWidth, kButtonHeight), outlineNames[i]))
+            {
+                SwitchShaderKeyword(outlineKeywords, i);
+            }
+            y += kButtonHeight + kButtonSpacing;
         }
     }
 }

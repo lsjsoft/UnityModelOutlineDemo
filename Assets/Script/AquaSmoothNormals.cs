@@ -57,5 +57,38 @@ public class AquaSmoothNormals
         }
         return OctNormal;
     }
+
+    public static Vector3[] ComputeSmoothedNormals3(Mesh mesh)
+    {
+        Vector3[] verts = mesh.vertices;
+        Vector3[] nors = mesh.normals;
+        Vector4[] tans = mesh.tangents;
+
+        int vertexCount = verts.Length;
+        if (tans.Length == 0)
+        {
+            return null;
+        }
+
+        Dictionary<Vector3, Vector3> smoothedNormalsMap = new(vertexCount);
+        for (int i = 0; i < vertexCount; i++)
+        {
+            if (smoothedNormalsMap.TryGetValue(verts[i], out Vector3 normal))
+            {
+                smoothedNormalsMap[verts[i]] = normal + nors[i];
+            }
+            else
+            {
+                smoothedNormalsMap.Add(verts[i], nors[i]);
+            }
+        }
+
+        Vector3[] bakedSmoothedNormals = new Vector3[vertexCount];
+        for (int i = 0; i < vertexCount; i++)
+        {
+            bakedSmoothedNormals[i] = smoothedNormalsMap[verts[i]].normalized;
+        }
+        return bakedSmoothedNormals;
+    }
 }
 }

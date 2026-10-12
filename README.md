@@ -1,10 +1,11 @@
 # Unity Outline Demo
 
 使用法线直接膨胀画Outline的Pass的效果
-![](https://blog.coolcoding.cn/wp-content/uploads/2026/10/image-2.png)
+![](Image~/image-2.png)
 
 在转角处有明显的裂缝
 
+![](Image~/image-4.png)
 原因：每个共用顶点，有N个不同的法线
 
 
@@ -22,6 +23,9 @@
 
 1套不压缩直接存储float3到uv7中
 
-
+![](Image~/image-5.png)
+![](Image~/image-6.png)
+![](Image~/image-7.png)
+![](Image~/image-8.png)
 
 
